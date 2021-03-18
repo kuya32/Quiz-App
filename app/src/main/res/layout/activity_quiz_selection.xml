@@ -106,7 +106,7 @@
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginTop="15dp"
-                    android:src="@drawable/ic_saitama"
+                    android:src="@drawable/ic_saitama_cover"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/selectionAnimeTitle" />

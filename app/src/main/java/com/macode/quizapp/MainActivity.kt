@@ -4,16 +4,21 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.activity_main.*
+import com.macode.quizapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        nextButton.setOnClickListener {
-            if(nameEditInput.text.toString().isEmpty()) {
-                showError(nameInput, "Please enter your name!")
+        binding.nextButton.setOnClickListener {
+            if(binding.nameEditInput.text.toString().isEmpty()) {
+                showError(binding.nameInput, "Please enter your name!")
             } else {
                 val intent = Intent(this, QuizSelectionActivity::class.java)
                 startActivity(intent)

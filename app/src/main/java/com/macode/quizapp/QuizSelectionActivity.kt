@@ -3,28 +3,33 @@ package com.macode.quizapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_quiz_selection.*
+import com.macode.quizapp.databinding.ActivityQuizSelectionBinding
 
 class QuizSelectionActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityQuizSelectionBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_selection)
+        binding = ActivityQuizSelectionBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        selectionCountryButton.setOnClickListener {
+        binding.selectionCountryButton.setOnClickListener {
             val intent = Intent(this, QuizQuestionsActivity::class.java)
             intent.putExtra("genre", "country")
             startActivity(intent)
             finish()
         }
 
-        selectionAnimeButton.setOnClickListener {
+        binding.selectionAnimeButton.setOnClickListener {
             val intent = Intent(this, QuizQuestionsActivity::class.java)
             intent.putExtra("genre", "anime")
             startActivity(intent)
             finish()
         }
 
-        selectionNFLButton.setOnClickListener {
+        binding.selectionNFLButton.setOnClickListener {
             val intent = Intent(this, QuizQuestionsActivity::class.java)
             intent.putExtra("genre", "nfl")
             startActivity(intent)
