@@ -1,7 +1,7 @@
 package com.macode.quizapp
 
 object Constants {
-    val countryQuestion = "What country does this flag belong to?"
+    private const val countryQuestion = "What country does this flag belong to?"
 
     fun getCountryQuestions(): ArrayList<Question> {
         val questionList = ArrayList<Question>()
@@ -107,6 +107,30 @@ object Constants {
             2)
 
         questionList.add(que1)
+        questionList.add(que2)
+        questionList.add(que3)
+        questionList.add(que4)
+        questionList.add(que5)
+        questionList.add(que6)
+        questionList.add(que7)
+        questionList.add(que8)
+        questionList.add(que9)
+        questionList.add(que10)
+
         return questionList
     }
+
+//    fun getAnimeQuestions(): ArrayList<Question> {
+//        val questionList = ArrayList<Question>()
+//
+//        val que1 = Question(
+//            1,
+//            "",
+//            R.drawable.ic_flag_of_new_zealand,
+//            "Australia",
+//            "New Zealand",
+//            "Japan",
+//            "Malaysia",
+//            2)
+//    }
 }

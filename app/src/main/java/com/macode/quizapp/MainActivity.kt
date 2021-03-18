@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startButton.setOnClickListener {
+        nextButton.setOnClickListener {
             if(nameEditInput.text.toString().isEmpty()) {
                 showError(nameInput, "Please enter your name!")
             } else {
