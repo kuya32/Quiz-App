@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:fillViewport="true"
+    tools:context=".QuizSelectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Quiz Genre:"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_margin="30dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/countryCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/selectionCountryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Country Quiz"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/selectionCountryImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_world_flags"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionCountryTitle" />
+
+                <Button
+                    android:id="@+id/selectionCountryButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionCountryImage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/animeCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/selectionAnimeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Anime Quiz"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/selectionAnimeImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_saitama_cover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionAnimeTitle" />
+
+                <Button
+                    android:id="@+id/selectionAnimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionAnimeImage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nflCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/selectionNFLTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="NFL Quiz"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/selectionNFLImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_nfl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionNFLTitle" />
+
+                <Button
+                    android:id="@+id/selectionNFLButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:textStyle="bold"
+                    android:layout_margin="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/selectionNFLImage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
