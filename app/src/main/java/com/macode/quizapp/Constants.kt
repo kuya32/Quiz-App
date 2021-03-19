@@ -3,6 +3,9 @@ package com.macode.quizapp
 object Constants {
     private const val countryQuestion = "What country does this flag belong to?"
     private const val animeQuestion = "Who is this anime character?"
+    const val USERS_NAME : String = "usersName"
+    const val TOTAL_QUESTIONS : String = "totalQuestions"
+    const val CORRECT_ANSWERS : String = "correctAnswers"
 
     fun getCountryQuestions(): ArrayList<Question> {
         val questionList = ArrayList<Question>()

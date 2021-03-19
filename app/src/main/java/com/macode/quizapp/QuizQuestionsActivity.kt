@@ -1,5 +1,6 @@
 package com.macode.quizapp
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.content.contentValuesOf
 import com.macode.quizapp.databinding.ActivityQuizQuestionsBinding
 import com.macode.quizapp.databinding.ActivityQuizSelectionBinding
 
@@ -19,6 +21,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var questionsList : ArrayList<Question>? = null
     private var selectedOptionPosition : Int = 0
     private var correctAnswers : Int = 0
+    private var userName : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +29,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         selectionBinding = ActivityQuizSelectionBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        userName = intent.getStringExtra(Constants.USERS_NAME)
 
         val toolbar = findViewById<Toolbar>(R.id.quizQuestionToolbar)
         setSupportActionBar(toolbar)
@@ -113,7 +118,12 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                             setQuestion()
                         }
                         else -> {
-
+                            val intent = Intent(this, ResultActivity::class.java)
+                            intent.putExtra(Constants.USERS_NAME, userName)
+                            intent.putExtra(Constants.TOTAL_QUESTIONS, questionsList!!.size.toString())
+                            intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers.toString())
+                            startActivity(intent)
+                            finish()
                         }
                     }
                 } else {

@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
                 showError(binding.nameInput, "Please enter your name!")
             } else {
                 val intent = Intent(this, QuizSelectionActivity::class.java)
+                intent.putExtra(Constants.USERS_NAME, binding.nameEditInput.text.toString())
                 startActivity(intent)
                 finish()
             }

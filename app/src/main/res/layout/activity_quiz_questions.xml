@@ -41,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:adjustViewBounds="true"
-                android:maxWidth="200dp"
-                android:maxHeight="200dp"
+                android:maxWidth="275dp"
+                android:maxHeight="275dp"
                 android:minWidth="100dp"
                 android:minHeight="100dp"
                 android:src="@drawable/ic_luffy" />
